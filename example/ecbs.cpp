@@ -5,7 +5,7 @@
 #include <boost/program_options.hpp>
 
 #include <yaml-cpp/yaml.h>
-
+#define REBUILT_FOCAL_LIST
 #include <libMultiRobotPlanning/ecbs.hpp>
 #include "timer.hpp"
 
