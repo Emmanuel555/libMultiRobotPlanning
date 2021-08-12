@@ -24,7 +24,7 @@ class TestECBS(unittest.TestCase):
 
   def test_mapfSimple1(self):
     r = self.runECBS("../test/mapf_simple1.yaml", 1.0)
-    self.assertTrue(r["statistics"]["cost"] == 8)
+    self.assertTrue(r["statistics"]["cost"] == 8) # run test to ensure cost is max 8
 
   #def test_mapfCircle(self):
   #  r = self.runECBS("../test/mapf_circle.yaml", 1.0)

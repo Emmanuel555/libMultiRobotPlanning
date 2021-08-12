@@ -165,18 +165,18 @@ int main(int argc, char* argv[]) {
   int y = 0;
   while (map.good()) {
     std::string line;
-    std::getline(map, line);
+    std::getline(map, line); // per line 
     int x = 0;
-    for (char c : line) {
+    for (char c : line) {  // for character in line
       if (c == '#') {
         obstacles.insert(State(x, y));
       }
       ++x;
     }
     dimX = std::max(dimX, x);
-    ++y;
+    ++y; // increases the dim of y per line, if txt file has got 4 lines, dim of y would be 5 
   }
-  std::cout << dimX << " " << y << std::endl;
+  std::cout << dimX << " " << y << std::endl; // addresses the two numbers at the top during the run
 
   bool success = false;
 
@@ -201,8 +201,8 @@ int main(int argc, char* argv[]) {
                 << "->" << solution.actions[i].first
                 << "(cost: " << solution.actions[i].second << ")" << std::endl;
     }
-    std::cout << solution.states.back().second << ": "
-              << solution.states.back().first << std::endl;
+    //std::cout << solution.states.back().second << ": "
+    //          << solution.states.back().first << std::endl;
 
     out << "schedule:" << std::endl;
     out << "  agent1:" << std::endl;

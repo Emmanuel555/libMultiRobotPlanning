@@ -46,6 +46,7 @@ set(ALL_SOURCE_FILES
   ${CMAKE_CURRENT_SOURCE_DIR}/include/libMultiRobotPlanning/planresult.hpp
   ${CMAKE_CURRENT_SOURCE_DIR}/include/libMultiRobotPlanning/sipp.hpp
   ${CMAKE_CURRENT_SOURCE_DIR}/example/a_star.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/example/a_star_borealis.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/example/a_star_epsilon.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/example/assignment.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/example/cbs.cpp
@@ -95,6 +96,15 @@ add_executable(a_star
 target_link_libraries(a_star
   ${Boost_LIBRARIES}
 )
+
+## a_star_borealis
+add_executable(a_star_borealis
+  example/a_star_borealis.cpp
+)
+target_link_libraries(a_star
+  ${Boost_LIBRARIES}
+)
+
 
 ## a_star_epsilon
 add_executable(a_star_epsilon
